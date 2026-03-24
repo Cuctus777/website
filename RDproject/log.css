@@ -1,0 +1,64 @@
+.header{
+  width: 100%;
+  padding: 3px;
+  height: auto;
+  font-family: lucida console;
+  background-color: rgb(40, 40, 40);
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+
+}
+body{
+    background-color: #1b1b1b;
+}
+h1{
+    color:rgb(55,189,128);
+   
+
+}
+
+  .sidebar {
+ 
+    height: 100%; /* Полная высота */
+    width: 250px; /* Ширина панели */
+
+    /* position: fixed; */
+     /* Фиксация на экране */
+    top: 0;
+    left: 0;
+    background-color: #1a1a1a; /* Цвет фона */
+    color: white;
+    padding-top: 20px;
+    border:1px solid rgb(37, 37, 37) ;
+  }
+  
+  .sidebar a {
+    padding: 10px 15px;
+    display: block;
+    color: white;
+    text-decoration: none;
+  }
+  .sidebar h3{
+    padding: 10px 15px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-family: lucida console;
+  } 
+  
+  .content {
+    margin-left: 250px; /* Отступ равен ширине панели */
+    padding: 20px;
+  }
+
+  .logo-text {
+    color:rgb(55,189,128);
+  }
+  .header-wrapper {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+  }
