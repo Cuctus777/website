@@ -1,0 +1,128 @@
+/*.header{
+  width: 100%;
+  padding: 3px;
+  height: auto;
+  font-family: lucida console;
+  background-color: rgb(40, 40, 40);
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+
+}
+body{
+    background-color: #1b1b1b;
+}
+h1{
+    color:rgb(55,189,128);
+   
+
+}
+
+  .sidebar {
+ 
+    height: 100%; Полная высота 
+    width: 250px; Ширина панели 
+
+    position: fixed; 
+      Фиксация на экране 
+    top: 0;
+    left: 0;
+    background-color: #1a1a1a;  Цвет фона
+    color: white;
+    padding-top: 20px;
+    border:1px solid rgb(37, 37, 37) ;
+  }
+  
+  .sidebar a {
+    padding: 10px 15px;
+    display: block;
+    color: white;
+    text-decoration: none;
+  }
+  .sidebar h3{
+    padding: 10px 15px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-family: lucida console;
+  } 
+  
+  .content {
+    margin-left: 250px;  Отступ равен ширине панели 
+    padding: 20px;
+  }
+
+  .logo-text {
+    color:rgb(55,189,128);
+  }
+  .header-wrapper {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+  }*/
+  h1{
+    color:rgb(55,189,128);
+}
+  body{
+    background-color: #1b1b1b;
+}
+#page {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-areas:
+      "head head"
+      "nav  main"
+      ".  foot";
+    grid-template-rows: 55px auto 100px;
+    grid-template-columns: 300px 1fr;
+    
+  }
+  
+ #page > header {
+  padding: 3px;
+  font-family: lucida console;
+  background-color: rgb(40, 40, 40);
+    grid-area: head;
+    color:rgb(55,189,128);
+    border:1px solid rgb(37, 37, 37) ;
+    font-size: 48px;
+  }
+
+  
+  #page > nav {
+    grid-area: nav;
+    background-color: #1a1a1a; 
+    color: white;
+    padding-top: 20px;
+    border:1px solid rgb(37, 37, 37) ;
+    margin-right: 3px;
+    box-sizing: border-box; /* Для корректного учета paddings и borders */
+  }
+  
+  #page > main {
+    grid-area: main;
+    background-color: #1a1a1a;
+    color:white;
+    padding: 20px;
+    border:1px solid rgb(37, 37, 37) ;
+  }
+  
+  #page > footer {
+    grid-area: foot;
+    background-color: #1a1a1a;
+    border:1px solid rgb(37, 37, 37) ;
+    color:white;
+    padding: 20px;
+  }
+  .img-left {
+    float: left; /* Картинка слева */
+    margin-right: 5px; /* Отступ справа от текста */
+    margin-bottom: 5px; /* Отступ снизу */
+}
+.footer-buttons{
+display: flex;
+gap: 10px;
+}
