@@ -134,3 +134,18 @@ gap: 10px;
 background-color: #1a1a1a;
 
 }
+.nav_cont{
+
+  display: flex;/* Делаем контейнер гибким */
+  flex-direction: column;
+  width: 100%;              /* Контейнер может занимать всю ширину... */
+  max-width: 400px;         /* ...но не станет шире 400 пикселей */
+         /* Внутренние отступы, чтобы текст не лип к краям */         
+  flex-direction: column;   /* Выстраиваем все элементы внутри в колонку */
+  align-items: left;      /* Центрируем элементы (поля и кнопки) внутри колонки */
+  background: #353535;
+  height: 98%;
+  gap: 10%;
+  padding-top: 10%;
+  box-sizing: border-box;
+}
