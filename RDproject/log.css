@@ -155,8 +155,19 @@ background-color: #1a1a1a;
 .nav_cont a{
 padding: 7%;
 background: #003621;
+
 font-family: sans-serif;
 }
 .nav_cont a:hover{
   background: #00a566;
+  display: inline-flex; /* Делаем ссылку флекс-контейнером */
+  align-items: center;  /* Выравниваем содержимое (картинку и текст) по центру вертикали */
+  gap: 8px;             /* Добавляем небольшой отступ между картинкой и текстом */
+  text-decoration: none; /* Убираем подчеркивание у ссылки, если нужно */
+}
+a {
+  display: inline-flex; /* Делаем ссылку флекс-контейнером */
+  align-items: center;  /* Выравниваем содержимое (картинку и текст) по центру вертикали */
+  gap: 8px;             /* Добавляем небольшой отступ между картинкой и текстом */
+  text-decoration: none; /* Убираем подчеркивание у ссылки, если нужно */
 }
