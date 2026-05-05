@@ -2,6 +2,7 @@
 <html> 
     <head>
         <link  rel="stylesheet" href="log.css">
+        <script src="message_script.js"></script>
     </head>
     <body>
       <div id="page">
@@ -18,10 +19,20 @@
           <a ><img src="./images/avs.svg" height="30px" width="30px">name_profile7</a>
           <a ><img src="./images/avs.svg" height="30px" width="30px">name_profile8</a>
         </div></nav>
-        <main>Main area</main>
+        <main><div class="chat">
+          <div id="messages"></div>
+
+        <div class="input-area">
+            <input id="input" placeholder="Сообщение..." autofocus />
+            <button onclick="sendMessage()">Отправить</button>
+        </div>
+        </div></main>
         <footer>
           <div class="footer-text">
-            <a><img src="./images/avs.svg" height="50px" width="50px">profile name</a >
+            <a><img src="./images/avs.svg" height="50px" width="50px">
+              <div class="top">
+              <input id="username" placeholder="Твоё имя" />
+          </div></a >
         </div>
           <div class="footer-buttons">
           <a class="btn" href="settings.html"><img src="./images/settings.svg" alt="Settings" width="50" height="50"></a>
