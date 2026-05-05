@@ -2,6 +2,7 @@
 <html> 
     <head>
         <link  rel="stylesheet" href="log.css">
+        <script src="message_script.js"></script>
     </head>
     <body>
       <div id="page">
@@ -9,24 +10,33 @@
         <header ><img src="./images/logo.svg" width="50" height="50" class="img-left">VECTOR
         </header>
         <nav><div class="nav_cont">
-          <a>name_profile1</a>
-          <a>name_profile2</a>
-          <a>name_profile3</a>
-          <a >name_profile4</a>
-          <a >name_profile5</a>
-          <a >name_profile6</a>
-          <a >name_profile7</a>
-          <a >name_profile8</a>
-          <a >name_profile9</a>
+          <a><img src="./images/avs.svg" height="30px" width="30px">name_profile1</a>
+          <a><img src="./images/avs.svg" height="30px" width="30px">name_profile2</a>
+          <a><img src="./images/avs.svg" height="30px" width="30px">name_profile3</a>
+          <a ><img src="./images/avs.svg" height="30px" width="30px">name_profile4</a>
+          <a ><img src="./images/avs.svg" height="30px" width="30px">name_profile5</a>
+          <a ><img src="./images/avs.svg" height="30px" width="30px">name_profile6</a>
+          <a ><img src="./images/avs.svg" height="30px" width="30px">name_profile7</a>
+          <a ><img src="./images/avs.svg" height="30px" width="30px">name_profile8</a>
         </div></nav>
-        <main>Main area</main>
+        <main><div class="chat">
+          <div id="messages"></div>
+
+        <div class="input-area">
+            <input id="input" placeholder="Сообщение..." autofocus />
+            <button onclick="sendMessage()">Отправить</button>
+        </div>
+        </div></main>
         <footer>
           <div class="footer-text">
-            <p>profile name</p>
+            <a><img src="./images/avs.svg" height="50px" width="50px">
+              <div class="top">
+              <input id="username" placeholder="Твоё имя" />
+          </div></a >
         </div>
           <div class="footer-buttons">
-          <a class="btn" href="#"><img src="./images/settings.svg" alt="Settings" width="50" height="50"></a>
-          <a class="btn" href="#"><img src="./images/three lines.svg" alt="Others" width="50" height="50"></a>
+          <a class="btn" href="settings.html"><img src="./images/settings.svg" alt="Settings" width="50" height="50"></a>
+          <!--<a class="btn" href="#"><img src="./images/three lines.svg" alt="Others" width="50" height="50"></a>-->
           <a class="btn" href="#"><img src="./images/search.svg" alt="Search" width="50" height="50"></a>
           <a class="btn" href="reg_page.html"><img src="./images/profile.svg" alt="Profile" width="50" height="50"></a>
       </div>

@@ -100,19 +100,11 @@ h1{
     border:1px solid rgb(37, 37, 37) ;
     margin-right: 3px;
     font-family: sans-serif;
+    background-image:url('./images/nav.svg') ;
     box-sizing: border-box; /* Для корректного учета paddings и borders */
   }
   
-  #page > main {
-    grid-area: main;
-    background-color: #1a1a1a;
-    color:white;
-    padding: 20px;
-    font-family: sans-serif;
-    border:1px solid rgb(37, 37, 37) ;
-    background-image:url('./images/circle_background(g).svg') ;
-    background-size: auto;
-  }
+ 
   
   #page > footer {
     grid-area: foot;
@@ -155,8 +147,105 @@ background-color: #1a1a1a;
 .nav_cont a{
 padding: 7%;
 background: #003621;
+
 font-family: sans-serif;
 }
 .nav_cont a:hover{
   background: #00a566;
+  display: inline-flex; /* Делаем ссылку флекс-контейнером */
+  align-items: center;  /* Выравниваем содержимое (картинку и текст) по центру вертикали */
+  gap: 8px;             /* Добавляем небольшой отступ между картинкой и текстом */
+  text-decoration: none; /* Убираем подчеркивание у ссылки, если нужно */
+}
+a {
+  display: inline-flex; /* Делаем ссылку флекс-контейнером */
+  align-items: center;  /* Выравниваем содержимое (картинку и текст) по центру вертикали */
+  gap: 8px;             /* Добавляем небольшой отступ между картинкой и текстом */
+  text-decoration: none; /* Убираем подчеркивание у ссылки, если нужно */
+}
+.top{}
+
+   .message { max-width: 80%;
+     padding: 8px 12px; 
+     border-radius: 15px; 
+     position: relative; 
+     font-size: 0.9em;
+     line-height: 1.4; }
+     .message.me { 
+       align-self: flex-end; 
+       background: #007045; 
+       color: white; 
+       border-bottom-right-radius: 2px; }
+       .message.other { align-self: flex-start; 
+        background: #ebebe4;
+         color: black; 
+         border-bottom-left-radius: 2px; }
+         .time { font-size: 0.7em;
+           opacity: 0.7; 
+           text-align: right; 
+           margin-top: 4px; }
+           #input { flex: 1; 
+            border: none;              /* Убирает рамку */
+            outline: none;             /* Убирает синюю обводку при клике */
+            background-color:rgb(230, 222, 222) ;
+           
+            padding: 8px; border-radius: 20px; 
+            outline: none; }
+           button { background: #007045; color: white; border: none; padding: 8px 15px; border-radius: 20px; cursor: pointer; }
+        button:hover { background: #00a566; }
+/* 1. Настраиваем main, чтобы он работал как контейнер для чата */
+#page > main {
+  grid-area: main;
+  display: flex;          /* Добавляем флекс */
+  flex-direction: column; /* Элементы внутри (чат) встанут в колонку */
+  padding: 0;             /* Убираем внутренний отступ, чтобы чат был во весь блок */
+  overflow: hidden;       /* Важно: чтобы скроллились только сообщения */
+  
+  /* Твои старые стили */
+  background-color: #1a1a1a;
+  color: white;
+  font-family: sans-serif;
+  border: 1px solid rgb(37, 37, 37);
+  background-image: url('./images/circle_background(g).svg');
+}
+
+/* 2. Растягиваем сам чат */
+.chat {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Занимает весь main */
+  width: 100%;
+}
+
+/* 3. Сообщения забирают всё свободное место */
+#messages {
+  flex: 1;               /* Магия: растягивает блок сообщений */
+  overflow-y: auto;      /* Позволяет скроллить сообщения */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 4. Поле ввода всегда внизу */
+.input-area {
+  flex-shrink: 0;        /* Не дает полю ввода сжиматься */
+  background: #222;      /* Цвет фона зоны ввода */
+  border-top: 1px solid #003a24;
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+/* 5. Исправляем отображение инпута внутри футера (имя пользователя) */
+.footer-text {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+#username {
+  background: #333;
+  color: white;
+  border: 1px solid #444;
 }
