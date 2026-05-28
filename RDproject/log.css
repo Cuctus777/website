@@ -1,67 +1,4 @@
-/*.header{
-  width: 100%;
-  padding: 3px;
-  height: auto;
-  font-family: lucida console;
-  background-color: rgb(40, 40, 40);
-  height: 100px;
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  align-items: center;
 
-}
-body{
-    background-color: #1b1b1b;
-}
-h1{
-    color:rgb(55,189,128);
-   
-
-}
-
-  .sidebar {
- 
-    height: 100%; Полная высота 
-    width: 250px; Ширина панели 
-
-    position: fixed; 
-      Фиксация на экране 
-    top: 0;
-    left: 0;
-    background-color: #1a1a1a;  Цвет фона
-    color: white;
-    padding-top: 20px;
-    border:1px solid rgb(37, 37, 37) ;
-  }
-  
-  .sidebar a {
-    padding: 10px 15px;
-    display: block;
-    color: white;
-    text-decoration: none;
-  }
-  .sidebar h3{
-    padding: 10px 15px;
-    display: block;
-    color: white;
-    text-decoration: none;
-    font-family: lucida console;
-  } 
-  
-  .content {
-    margin-left: 250px;  Отступ равен ширине панели 
-    padding: 20px;
-  }
-
-  .logo-text {
-    color:rgb(55,189,128);
-  }
-  .header-wrapper {
-    display: flex;
-    justify-content: right;
-    gap: 10px;
-  }*/
   h1{
     color:rgb(55,189,128);
 }
@@ -101,7 +38,7 @@ h1{
     margin-right: 3px;
     font-family: sans-serif;
     background-image:url('./images/nav.svg') ;
-    box-sizing: border-box; /* Для корректного учета paddings и borders */
+    box-sizing: border-box; 
   }
   
  
@@ -118,9 +55,9 @@ h1{
     background-color: transparent;
   }
   .img-left {
-    float: left; /* Картинка слева */
-    margin-right: 5px; /* Отступ справа от текста */
-    margin-bottom: 5px; /* Отступ снизу */
+    float: left; 
+    margin-right: 5px; 
+    margin-bottom: 5px; 
 }
 .footer-buttons{
 display: flex;
@@ -130,14 +67,13 @@ background-color: #1a1a1a;
 }
 .nav_cont{
 
-  display: flex;/* Делаем контейнер гибким */
+  display: flex;
   flex-direction: column;
-  width: 100%;              /* Контейнер может занимать всю ширину... */
-  max-width: 400px;         /* ...но не станет шире 400 пикселей */
-         /* Внутренние отступы, чтобы текст не лип к краям */         
-  flex-direction: column;   /* Выстраиваем все элементы внутри в колонку */
-  align-items: left;      /* Центрируем элементы (поля и кнопки) внутри колонки */
-  /*background: #272626;*/
+  width: 100%;              
+  max-width: 400px;         
+               
+  flex-direction: column;  
+  align-items: left;     
   height: 98%;
   gap: 4%;
   padding-top: 5%;
@@ -152,16 +88,16 @@ font-family: sans-serif;
 }
 .nav_cont a:hover{
   background: #00a566;
-  display: inline-flex; /* Делаем ссылку флекс-контейнером */
-  align-items: center;  /* Выравниваем содержимое (картинку и текст) по центру вертикали */
-  gap: 8px;             /* Добавляем небольшой отступ между картинкой и текстом */
-  text-decoration: none; /* Убираем подчеркивание у ссылки, если нужно */
+  display: inline-flex;
+  align-items: center;  
+  gap: 8px;             
+  text-decoration: none; 
 }
 a {
-  display: inline-flex; /* Делаем ссылку флекс-контейнером */
-  align-items: center;  /* Выравниваем содержимое (картинку и текст) по центру вертикали */
-  gap: 8px;             /* Добавляем небольшой отступ между картинкой и текстом */
-  text-decoration: none; /* Убираем подчеркивание у ссылки, если нужно */
+  display: inline-flex;
+  align-items: center;  
+  gap: 8px;             
+  text-decoration: none;
 }
 .top{}
 
@@ -185,23 +121,22 @@ a {
            text-align: right; 
            margin-top: 4px; }
            #input { flex: 1; 
-            border: none;              /* Убирает рамку */
-            outline: none;             /* Убирает синюю обводку при клике */
+            border: none;            
+            outline: none;            
             background-color:rgb(230, 222, 222) ;
            
             padding: 8px; border-radius: 20px; 
             outline: none; }
            button { background: #007045; color: white; border: none; padding: 8px 15px; border-radius: 20px; cursor: pointer; }
         button:hover { background: #00a566; }
-/* 1. Настраиваем main, чтобы он работал как контейнер для чата */
 #page > main {
   grid-area: main;
-  display: flex;          /* Добавляем флекс */
-  flex-direction: column; /* Элементы внутри (чат) встанут в колонку */
-  padding: 0;             /* Убираем внутренний отступ, чтобы чат был во весь блок */
-  overflow: hidden;       /* Важно: чтобы скроллились только сообщения */
+  display: flex;          
+  flex-direction: column; 
+  padding: 0;             
+  overflow: hidden;      
   
-  /* Твои старые стили */
+ 
   background-color: #1a1a1a;
   color: white;
   font-family: sans-serif;
@@ -209,35 +144,35 @@ a {
   background-image: url('./images/circle_background(g).svg');
 }
 
-/* 2. Растягиваем сам чат */
+
 .chat {
   display: flex;
   flex-direction: column;
-  height: 100%; /* Занимает весь main */
+  height: 100%; 
   width: 100%;
 }
 
-/* 3. Сообщения забирают всё свободное место */
+
 #messages {
-  flex: 1;               /* Магия: растягивает блок сообщений */
-  overflow-y: auto;      /* Позволяет скроллить сообщения */
+  flex: 1;               
+  overflow-y: auto;     
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-/* 4. Поле ввода всегда внизу */
+
 .input-area {
-  flex-shrink: 0;        /* Не дает полю ввода сжиматься */
-  background: #222;      /* Цвет фона зоны ввода */
+  flex-shrink: 0;       
+  background: #222;      
   border-top: 1px solid #003a24;
   padding: 15px;
   display: flex;
   gap: 10px;
 }
 
-/* 5. Исправляем отображение инпута внутри футера (имя пользователя) */
+
 .footer-text {
   display: flex;
   align-items: center;
